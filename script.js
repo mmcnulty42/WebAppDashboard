@@ -15,7 +15,7 @@ let trafficOptions = {
 
 
 };
-let trafficChart = new Chart(trafficCanvas, { type: 'line', data: trafficData, options: trafficOptions, maintainAspectRatio: false });
+let trafficChart = new Chart(trafficCanvas, { type: 'line', data: trafficData, options: trafficOptions, maintainAspectRatio: false, responsive:true });
 const dailyCanvas = document.getElementById("daily-chart");
 const dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"], datasets: [{
@@ -24,7 +24,7 @@ const dailyData = {
     }]
 };
 const dailyOptions = { scales: { yAxes: [{ ticks: { beginAtZero: true } }] }, legend: { display: false } };
-let dailyChart = new Chart(dailyCanvas, { type: 'bar', data: dailyData, options: dailyOptions, maintainAspectRatio: false });
+let dailyChart = new Chart(dailyCanvas, { type: 'bar', data: dailyData, options: dailyOptions, maintainAspectRatio: false, responsive:true });
 const mobileCanvas = document.getElementById("mobile-chart");
 const mobileData = {
     labels: ["Desktop", "Tablet", "Users"],
@@ -42,7 +42,7 @@ const mobileOptions = {
 let mobileChart = new Chart(mobileCanvas, {
     type: 'doughnut',
     data: mobileData,
-    options: mobileOptions, maintainAspectRatio: false
+    options: mobileOptions, maintainAspectRatio: false, responsive:true
 
 });
 const user = document.getElementById("userField");
